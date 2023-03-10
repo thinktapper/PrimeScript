@@ -1,9 +1,21 @@
+mod shapes;
+
+use crate::shapes::{rect::Rect, circ};
+
 fn main() {
-    let file_name = std::env::args().nth(1).
-        expect("Please provide a path to a file");
+    let rect = Rect::default();
+    let rect2 = Rect::default();
 
-    let file = std::fs::read_to_string(file_name)
-        .expect("Could not read file");
-
-    file.lines().for_each(|line| println!("{}", line));
+    let circ = circ::Circle {
+        x: 0.0,
+        y: 0.0,
+        radius: 10.0,
+    };
+    let circ2 = circ::Circle {
+        x: 0.0,
+        y: 0.0,
+        radius: 10.0,
+    };
+    
+    println!("{}", rect);
 }
