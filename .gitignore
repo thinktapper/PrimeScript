@@ -10,7 +10,7 @@ Cargo.lock
 **/*.rs.bk
 
 .DS_Store
-
+node_modules
 
 # Added by cargo
 
